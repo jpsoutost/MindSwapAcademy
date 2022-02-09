@@ -28,5 +28,6 @@ public abstract class Fruit {
     public String toString(){
         return this.getClass().toString().substring(29).toUpperCase() + Messages.ACIDITY + this.acidity;
     }
+
 }
 
