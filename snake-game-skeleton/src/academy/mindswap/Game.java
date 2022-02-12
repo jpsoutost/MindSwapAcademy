@@ -32,7 +32,7 @@ public class Game {
         generateFruit();
         Field.score(this.score);
 
-        while (this.snake.isAlive()) {
+        while (snake.isAlive()) {
             if( this.snake.getDirection().equals(Direction.DOWN)|| this.snake.getDirection().equals(Direction.UP)){
                 Thread.sleep((long) (delay*2));
             }else {
@@ -44,9 +44,10 @@ public class Game {
             Field.drawSnake(snake);
         }
 
-        while(true) {
+        while (true) {
             gameOver();
         }
+
     }
 
     private void generateFruit() {
@@ -61,18 +62,34 @@ public class Game {
         if (k != null) {
             switch (k.getKind()) {
                 case ArrowUp:
+                    if (snake.getDirection().equals(Direction.DOWN)) {
+                        snake.move();
+                        return;
+                    }
                     snake.move(Direction.UP);
                     return;
 
                 case ArrowDown:
+                    if (snake.getDirection().equals(Direction.UP)){
+                        snake.move();
+                        return;
+                    }
                     snake.move(Direction.DOWN);
                     return;
 
                 case ArrowLeft:
+                    if (snake.getDirection().equals(Direction.RIGHT)){
+                        snake.move();
+                        return;
+                    }
                     snake.move(Direction.LEFT);
                     return;
 
                 case ArrowRight:
+                    if (snake.getDirection().equals(Direction.LEFT)){
+                        snake.move();
+                        return;
+                    }
                     snake.move(Direction.RIGHT);
                     return;
             }
@@ -107,12 +124,13 @@ public class Game {
 
     private void gameOver() throws InterruptedException {
         Field.drawGameOver(Terminal.Color.BLUE);
-        Thread.sleep(500);
+        Thread.sleep(1000);
         Field.drawGameOver(Terminal.Color.YELLOW);
-        Thread.sleep(500);
-        Field.drawGameOver(Terminal.Color.GREEN);
-        Thread.sleep(500);
-
+        Thread.sleep(1000);
+        Field.drawGameOver(Terminal.Color.MAGENTA);
+        Thread.sleep(1000);
+        Field.drawGameOver(Terminal.Color.RED);
+        Thread.sleep(1000);
     }
 
 }

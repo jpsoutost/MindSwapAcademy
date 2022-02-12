@@ -1,6 +1,9 @@
 package academy.mindswap;
 
+import academy.mindswap.field.Field;
+
 public class Main {
+
 
     public static void main(String[] args) {
        Game game = new Game(100, 25, 100);
