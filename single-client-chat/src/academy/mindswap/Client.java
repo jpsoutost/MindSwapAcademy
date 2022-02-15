@@ -34,6 +34,7 @@ public class Client {
                 break;
             }
         }
+
         clientSocket.close();
     }
 }
