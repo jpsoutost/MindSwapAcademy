@@ -1,0 +1,13 @@
+
+15:00:03.545456900 Optional academy.mindswap.lms.services.UserService.getUserById(int) Optional[UserDto{id=1, name='user1', email='user1@email'}]
+15:01:10.942075900 Optional academy.mindswap.lms.services.UserService.getUserById(int) Optional[UserDto{id=1, name='user1', email='user1@email'}]
+15:01:11.999179100 Optional academy.mindswap.lms.services.UserService.getUserById(int) Optional[UserDto{id=1, name='user1', email='user1@email'}]
+15:01:12.933263400 Optional academy.mindswap.lms.services.UserService.getUserById(int) Optional[UserDto{id=1, name='user1', email='user1@email'}]
+15:01:29.429313100 List academy.mindswap.lms.services.UserService.getUserByName(String) []
+15:01:37.782405400 List academy.mindswap.lms.services.UserService.getUserByName(String) [UserDto{id=2, name='user2', email='user2@email'}]
+15:05:23.866717900 boolean academy.mindswap.lms.services.PasswordService.changePassword(PasswordDto) false
+15:08:34.289155 boolean academy.mindswap.lms.services.PasswordService.changePassword(PasswordDto) false
+15:09:12.231568700 boolean academy.mindswap.lms.services.PasswordService.changePassword(PasswordDto) true
+15:13:20.744235500 Optional academy.mindswap.lms.services.UserService.getUserById(int) TESTE
+15:15:01.077562300 Optional academy.mindswap.lms.services.UserService.getUserById(int) null TESTE
+15:16:04.181701600 Optional academy.mindswap.lms.services.UserService.getUserById(int) class java.lang.Exception TESTE
